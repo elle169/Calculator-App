@@ -224,3 +224,42 @@ range.addEventListener("click", ()=>{
 
 
 
+
+range.addEventListener("touchend", ()=>{
+    if(range.value == 1) {
+     theme.forEach( i =>{
+     
+         i.classList.remove("dark")
+ 
+        i.classList.add("light")
+        darktsound.load()
+        lightsound.play()
+     })
+    
+    }
+ 
+    if(range.value == 2) {
+     theme.forEach( i =>{
+         i.classList.remove("light")
+ 
+        i.classList.add("dark")
+ 
+        darktsound.play()
+        lightsound.load()
+     })
+    }
+    if(range.value == 0) {
+     theme.forEach( i =>{
+         i.classList.remove("dark")
+         i.classList.remove("light")
+         darktsound.load()
+         lightsound.load()
+     })
+    }
+ 
+    
+ })
+ 
+ 
+ 
+ 
